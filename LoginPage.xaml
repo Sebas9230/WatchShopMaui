@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.LoginPage"
+             Title="LoginPage">
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <!-- Imagen de fondo con 50% de transparencia -->
+        <Image Source="tempo.png" Aspect="AspectFill" Opacity=".9" />
+
+        <!--Indicador espera-->
+        <ActivityIndicator x:Name="loginIndicator" 
+                           IsRunning="False" 
+                           IsVisible="False" 
+                           Scale="2" 
+                           Color="Purple"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"/>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="120">
+            <Grid>
+                <BoxView Color="White" Opacity="0.5" />
+                <StackLayout>
+                    <!--<Label Text="Inicio de sesion" FontSize="24" HorizontalOptions="Center" />-->
+                    <Frame Padding="5" BorderColor="Black" Opacity="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="Center" >
+                        <Label Text="Inicio de sesión" FontSize="30" TextColor="Blue" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Frame>
+
+                    <Entry x:Name="UsernameEntry" Placeholder="Nombre de usuario"  HeightRequest="60"/>
+                    <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" HeightRequest="60"/>
+                    <Button x:Name="LoginButton" Text="Iniciar sesión" Clicked="OnLoginButtonClicked" Margin="0,5"/>
+                    <Button x:Name="RegisterButton" Text="Registrarse" Clicked="OnRegisterButtonClicked" Margin="0,5"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>

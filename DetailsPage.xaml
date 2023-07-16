@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.DetailsPage"
+             Title="DetailsPage"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout>
+        <Image
+                x:Name="imagen"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="nombre"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="telefono"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="direccion"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="cedula"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="compras"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Eliminar" 
+                    BackgroundColor="Red"
+                    Margin="5"
+                Clicked="onClickEliminarContacto" 
+                    HorizontalOptions="FillAndExpand"/>
+            <Button Text="Modificar"            
+                Margin="5"
+                Clicked="onClickModificarContacto"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

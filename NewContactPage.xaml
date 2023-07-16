@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.NewContactPage"
+             Title="NewContactPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image
+                    x:Name="imagenCamara"
+                    HeightRequest="300"
+                    HorizontalOptions="Center" />
+            <Button Text="Abrir Cámara" 
+                        BackgroundColor="Blue"
+                        Margin="5"
+                    Clicked="onClickAbrirCamara" 
+                        HorizontalOptions="FillAndExpand"/>
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Ingrese los datos del nuevo contacto">
+                        <EntryCell x:Name="UserName"
+                           Placeholder="Usuario" />
+                        <EntryCell x:Name="Password"
+                           Placeholder="Contraseña"/>
+                        <EntryCell x:Name="nombre"
+                           Placeholder="Nombre" />
+                        <EntryCell x:Name="cedula"
+                           Placeholder="Cedula"/>
+                        <EntryCell x:Name="telefono"
+                           Placeholder="Teléfono" 
+                            Keyboard="Numeric"/>
+                        <EntryCell x:Name="direccion"
+                           Placeholder="Dirección" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Guardar Contacto"
+                    Margin="20"
+                    Clicked="onClickGuardarContacto" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

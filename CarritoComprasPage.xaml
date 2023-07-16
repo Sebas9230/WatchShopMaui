@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.CarritoComprasPage"
+             Title="CarritoComprasPage">
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Carrito de Compras" FontSize="Title" HorizontalOptions="Center" />
+
+                <!-- Aquí puedes agregar la lista de productos en el carrito -->
+                <ListView x:Name="listaCarrito" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding name}" Detail="{Binding price}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!-- Aquí se muestra el total a pagar -->
+                <Label Text="{Binding Total, StringFormat='Total: {0:C}'}" FontSize="Large" HorizontalOptions="Center" />
+
+                <Button Text="Pagar" Clicked="OnClickPagar" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

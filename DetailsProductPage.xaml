@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HolaMundo.DetailsProductPage"
+             Title="DetailsProductPage">
+    <VerticalStackLayout>
+        <Image
+                x:Name="imagen"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="nombre"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="precio"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        <Label
+                x:Name="cantidad"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        <!--<StackLayout Orientation="Horizontal" >
+            <Button Text="Eliminar Contacto" 
+                    BackgroundColor="Red"
+                    Margin="5"
+                Clicked="onClickEliminarContacto" 
+                    HorizontalOptions="FillAndExpand"/>
+            <Button Text="Modificar Contacto"            
+                Margin="5"
+                Clicked="onClickModificarContacto"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>-->
+
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Agregar Carrito" 
+                    BackgroundColor="Blue"
+                    Margin="5"
+                    Clicked="onClickAgregarCarrito" 
+                    HorizontalOptions="FillAndExpand"/>
+            <Button Text="Ir al Carrito"
+                    BackgroundColor="Black"
+                    Margin="5"
+                    Clicked="onClickIrCarrito"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
